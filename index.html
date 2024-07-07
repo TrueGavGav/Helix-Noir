@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - custom web IDE</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Code Editor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Web Code Editor</h1>
+  </header>
+  <main>
+    <div class="project-manager">
+      <h2>Projects</h2>
+      <select id="project-list" onchange="loadProject(this.value)"></select>
+      <button onclick="addProject()">Add Project</button>
+      <button onclick="exportProjectToZip()">Export to ZIP</button>
+      <input type="file" id="import-file" accept=".zip" onchange="importProject(this.files)">
+      <label for="import-file">Import ZIP</label>
+    </div>
+    <div class="file-explorer">
+      <div class="folders">
+        <h2>Folders</h2>
+        <ul id="folder-list"></ul>
+        <button onclick="addFolder()">Add Folder</button>
+      </div>
+      <div class="files">
+        <h2>Files</h2>
+        <ul id="file-list"></ul>
+        <button onclick="addFile()">Add File</button>
+      </div>
+    </div>
+    <div class="editor-pane">
+      <div class="file-tabs">
+        <button onclick="saveCurrentFile()">Save Current File</button>
+        <button onclick="previewInBrowser()">Preview</button>
+        <select id="file-tabs" onchange="switchFile(this.value)"></select>
+      </div>
+      <textarea id="code-editor" placeholder="Enter code here..."></textarea>
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

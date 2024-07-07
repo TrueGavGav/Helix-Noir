@@ -1,0 +1,289 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrollbars in the body */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+/* Project Manager Panel */
+.project-manager {
+  flex: 0 0 250px;
+  background-color: #2d2d2d;
+  padding: 10px;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.project-manager h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project-manager button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: none;
+  background-color: #007acc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.project-manager button:hover {
+  background-color: #005f80;
+}
+
+.project-manager input[type="file"] {
+  display: none;
+}
+
+.project-manager label {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: #007acc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.project-manager label:hover {
+  background-color: #005f80;
+}
+
+/* File Explorer Panel */
+.file-explorer {
+  flex: 0 0 300px;
+  background-color: #2d2d2d;
+  padding: 10px;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.file-explorer h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.file-explorer .folders, .file-explorer .files {
+  margin-bottom: 20px;
+}
+
+.file-explorer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-explorer li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #3a3a3a;
+  transition: background-color 0.3s ease;
+}
+
+.file-explorer li:hover {
+  background-color: #4a4a4a;
+}
+
+.file-explorer button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #007acc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.file-explorer button:hover {
+  background-color: #005f80;
+}
+
+/* Editor Pane */
+.editor-pane {
+  flex: 1;
+  padding: 10px;
+}
+
+.editor-pane .file-tabs {
+  margin-bottom: 10px;
+}
+
+.editor-pane .file-tabs button, .editor-pane .file-tabs select {
+  padding: 10px;
+  border: none;
+  background-color: #007acc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.editor-pane .file-tabs button:hover, .editor-pane .file-tabs select:hover {
+  background-color: #005f80;
+}
+
+.editor-pane textarea {
+  width: 100%;
+  height: calc(100vh - 250px);
+  border: none;
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+}
+
+.editor-pane textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #007acc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Project Manager Panel */
+.project-manager {
+  flex: 0 0 250px;
+  background-color: #2d2d2d;
+  padding: 10px;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.project-manager h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project-manager button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: none;
+  background-color: #007acc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.project-manager button:hover {
+  background-color: #005f80;
+}
+
+.project-manager input[type="file"] {
+  display: none;
+}
+
+.project-manager label {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: #007acc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.project-manager label:hover {
+  background-color: #005f80;
+}
+
+/* Project List Dropdown */
+#project-list {
+  width: 100%;
+  padding: 12px;
+  background-color: #3a3a3a;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#project-list option {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+#project-list:hover {
+  background-color: #4a4a4a;
+}
+
+#project-list:focus {
+  outline: none;
+  box-shadow: 0 0 5px #007acc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .project-manager, .file-explorer {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .editor-pane textarea {
+    height: calc(100vh - 320px);
+  }
+}
